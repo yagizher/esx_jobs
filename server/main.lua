@@ -132,7 +132,7 @@ AddEventHandler('esx_jobs:caution', function(cautionType, cautionAmount, spawnPo
 	
 				xPlayer.addAccountMoney('bank', toGive)
 				account.removeMoney(toGive)
-				TriggerClientEvent('esx:showNotification', source, _U('bank_deposit_returned', ESX.Math.GroupDigits(toGive)))
+				xPlayer.showNotification(_U('bank_deposit_returned', ESX.Math.GroupDigits(toGive)))
 			end)
 		end
 	end
